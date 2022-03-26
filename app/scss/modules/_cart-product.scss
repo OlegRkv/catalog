@@ -1,0 +1,128 @@
+.cart-product {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 690px) {
+    max-width: 444px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    max-width: 625px;
+    width: 100%;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 930px) {
+      max-width: 515px;
+    }
+
+    @media (max-width: 690px) {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper-amount {
+    max-width: 545px;
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 1.5;
+
+    @media (max-width: 690px) {
+      padding-top: 15px;
+      padding-right: 0;
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    width: 125px;
+    height: 150px;
+    margin-right: 65px;
+    object-fit: cover;
+
+    @media (max-width: 690px) {
+      width: 335px;
+      height: 400px;
+      margin-right: 0;
+    }
+
+    @media (min-width: 320px) and (max-width: 410px) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &__descr {
+    max-width: 275px;
+    padding-top: 15px;
+
+    @media (max-width: 690px) {
+      text-align: center;
+    }
+  }
+
+  &__price {
+    margin-left: 40px;
+    font-size: 18px;
+    font-weight: 700;
+
+    @media (max-width: 930px) {
+      margin-left: 5px;
+    }
+
+    @media (max-width: 690px) {
+      margin-bottom: 15px;
+      order: -1;
+    }
+  }
+
+  &__del {
+    position: relative;
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 0;
+
+    @media (max-width: 690px) {
+      width: 170px;
+      height: 40px;
+      padding-left: 20px;
+      font-size: 16px;
+      background-color: $blue;
+      color: $white;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 1px;
+      left: 0;
+      background-color: $black;
+
+      @media (max-width: 690px) {
+        background-color: $white;
+        top: 19px;
+        left: 35px;
+      }
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
